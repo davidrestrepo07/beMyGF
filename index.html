@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana, ¿Quieres ser mi chiquibaby my love?</title>
+  <style>
+    .body {
+      text-align: center;
+      background-image: url('assets/chaneyol.jpeg');
+    }
+
+    .body__title {
+      color: white;
+    }
+      
+    .button {
+      align-items: center;
+      background-color: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: .25rem;
+      box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+      box-sizing: border-box;
+      color: rgba(0, 0, 0, 0.85);
+      cursor: pointer;
+      display: inline-flex;
+      font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      justify-content: center;
+      line-height: 1.25;
+      margin: 0;
+      min-height: 3rem;
+      padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+      position: relative;
+      text-decoration: none;
+      transition: all 250ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: baseline;
+      width: auto;
+    }
+
+    .button:focus {
+      border-color: rgba(0, 0, 0, 0.15);
+      box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+      color: rgba(0, 0, 0, 0.65);
+    }
+
+    .button:active {
+      background-color: #F0F0F1;
+      border-color: rgba(0, 0, 0, 0.15);
+      box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+      color: rgba(0, 0, 0, 0.65);
+      transform: translateY(0);
+    }
+
+    .body__img {
+      width: 100%;
+      max-width: 512px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <h1 class="body__title">Ana, ¿Quieres ser mi chiquibaby my love?</h1>
+  <img src="https://frikimaestro.com/wp-content/uploads/2019/10/0005-3.jpg" class="body__img" />
+  <br>
+  <button class="button" id="yes">Si!</button>
+  <button class="button" id="no">No :c</button>
+
+  <script>
+    const buttonSi = document.getElementById('yes');
+    const buttonNo = document.getElementById('no');
+
+    const yesClick = () => {
+      alert('Te quiero muchisimo mi chiquibaby my love');
+      location.href = 'https://youtu.be/Mcj75l2gJcY?si=n1Y3hQGuGz6SrJD5 ';
+    };
+
+    const noClick = () => {
+      buttonNo.style.position = 'absolute';
+      buttonNo.style.top = (Math.random() * window.innerHeight + 'px');
+      buttonNo.style.left = (Math.random() * window.innerWidth + 'px');
+    };
+
+    buttonSi.addEventListener('click', yesClick);
+    buttonNo.addEventListener('click', noClick);
+  </script>
+</body>
+
+</html>
